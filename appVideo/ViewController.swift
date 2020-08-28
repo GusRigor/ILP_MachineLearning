@@ -40,10 +40,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
         self.imagem.image = imagem
         identificacao.text = "Processando informação..."
         
-        //guard let ciImage = CIImage(image: imagem) else{
-        //    fatalError("AAAAA Não converteu...")
-        //}
-        //detectandoImagem(ciImage)
+        guard let ciImage = CIImage(image: imagem) else{
+            fatalError("AAAAA Não converteu...")
+        }
+        detectandoImagem(ciImage)
     }
     
 //MARK: Utilizar o modelo de Machine Learning
@@ -58,7 +58,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
             fatalError("Deu ruim no request")
             }
         DispatchQueue.main.async{
-            self.identificacao.text = "Confiança é de \(Int(primeiroResultado.confidence*100))% que isso pode ser \(primeiroResultado.identifier)"
+            self.identificacao.isHidden = false
+            self.identificacao.text = "Confiança é de \(Int(primeiroResultado.confidence*100))% \n que isso pode ser \(primeiroResultado.identifier)"
         }
     }
     
