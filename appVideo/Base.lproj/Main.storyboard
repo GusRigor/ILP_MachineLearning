@@ -16,16 +16,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="j0n-cx-BH9">
-                                <rect key="frame" x="20" y="154" width="374" height="371"/>
+                                <rect key="frame" x="20" y="194" width="374" height="331"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Identificador de imagem" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RxN-2a-yLR">
-                                <rect key="frame" x="76.5" y="99" width="261" height="30"/>
+                                <rect key="frame" x="76.5" y="139" width="261" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Escolha uma imagem" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EVC-Ud-frJ">
-                                <rect key="frame" x="114.5" y="570" width="185" height="24"/>
+                                <rect key="frame" x="114.5" y="600" width="185" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -43,11 +43,11 @@
                         <constraints>
                             <constraint firstItem="hlP-JO-hbX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="211-fU-qyi"/>
                             <constraint firstItem="j0n-cx-BH9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="CYe-ag-S6k"/>
-                            <constraint firstItem="EVC-Ud-frJ" firstAttribute="top" secondItem="j0n-cx-BH9" secondAttribute="bottom" constant="45" id="IuZ-OH-zoP"/>
+                            <constraint firstItem="EVC-Ud-frJ" firstAttribute="top" secondItem="j0n-cx-BH9" secondAttribute="bottom" constant="75" id="IuZ-OH-zoP"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hlP-JO-hbX" secondAttribute="bottom" constant="125" id="PgS-Re-woF"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="j0n-cx-BH9" secondAttribute="bottom" constant="337" id="Rcd-Bo-vSR"/>
                             <constraint firstItem="j0n-cx-BH9" firstAttribute="top" secondItem="RxN-2a-yLR" secondAttribute="bottom" constant="25" id="dba-MP-heU"/>
-                            <constraint firstItem="j0n-cx-BH9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="110" id="hvR-Jm-igs"/>
+                            <constraint firstItem="j0n-cx-BH9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="hvR-Jm-igs"/>
                             <constraint firstItem="EVC-Ud-frJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jcq-7o-DAx"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="j0n-cx-BH9" secondAttribute="trailing" constant="20" id="nz5-7v-OoL"/>
                             <constraint firstItem="RxN-2a-yLR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sTe-HU-HpN"/>
