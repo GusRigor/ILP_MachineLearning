@@ -34,6 +34,9 @@
                                 <rect key="frame" x="106" y="701" width="202" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Selecione uma imagem"/>
+                                <connections>
+                                    <action selector="pegarImagem:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dsS-kW-MyC"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -51,6 +54,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="botao" destination="hlP-JO-hbX" id="Hgd-Uk-md4"/>
+                        <outlet property="identificacao" destination="EVC-Ud-frJ" id="ake-KM-vou"/>
+                        <outlet property="imagem" destination="j0n-cx-BH9" id="hHP-Tr-GNP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
