@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import CoreML
+import Vision
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
 
@@ -44,6 +46,31 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
         //detectandoImagem(ciImage)
     }
     
+//MARK: Utilizar o modelo de Machine Learning
+    func detectandoImagem(_ imagem: CIImage){
+    //carregar o modelo
+    guard let modelo = try? VNCoreMLModel.init(for: Resnet50().model)else{
+        fatalError("Deu ruim no modelo")
+    }
+    let request = VNCoreMLRequest(model: modelo){ request, error in
+        
+        guard let resultado = request.results as? [VNClassificationObservation], let primeiroResultado = resultado.first else{
+            fatalError("Deu ruim no request")
+            }
+        DispatchQueue.main.async{
+            self.identificacao.text = "Confiança é de \(Int(primeiroResultado.confidence*100))% que isso pode ser \(primeiroResultado.identifier)"
+        }
+    }
+    
+    //rodar o CoreML no global dispatch para classificação
+    let handler = VNImageRequestHandler.init(ciImage: imagem)
+    
+    do {
+        try  handler.perform([request])
+    } catch{
+        print("F por \(error)")
+    }
+    }
 
 
 }
